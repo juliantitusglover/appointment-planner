@@ -38,7 +38,7 @@ export const ContactsPage = ({ contacts, addContact }) => {
         <h2>Add Contact</h2> 
         <ContactForm 
           name={name} 
-          phoneNumber={phoneNumber} 
+          phone={phoneNumber} 
           email={email} 
           setName={setName}
           setPhoneNumber={setPhoneNumber}
