@@ -11,6 +11,14 @@ export const ContactsPage = ({ contacts, addContact }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!isDuplicate) {
+      addContact(name, phoneNumber, email);
+      setName('');
+      setPhoneNumber('');
+      setEmail('');
+    } else {
+      alert(`Contact name "${name}" is already in Contact list.`);
+    }
   };
 
   return (
