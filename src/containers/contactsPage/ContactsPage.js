@@ -21,10 +21,30 @@ export const ContactsPage = ({ contacts, addContact }) => {
     }
   };
 
+  useEffect(() => {
+    for(let i = 0; i < contacts.length; i++) {
+      if(contacts[i].name === name) {
+        setIsDuplicate(true);
+        break;
+      } else {
+        setIsDuplicate(false);
+      }
+    }
+  }, [contacts, name]);
+
   return (
     <div>
       <section>
         <h2>Add Contact</h2> 
+        <ContactForm 
+          name={name} 
+          phoneNumber={phoneNumber} 
+          email={email} 
+          setName={setName}
+          setPhoneNumber={setPhoneNumber}
+          setEmail={setEmail}
+          handleSubmit={handleSubmit}
+        />
       </section>
       <hr />
       <section>
