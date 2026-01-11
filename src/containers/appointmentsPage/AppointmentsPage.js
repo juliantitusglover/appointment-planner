@@ -18,7 +18,11 @@ export const AppointmentsPage = ({ appointments, contacts, addAppointment }) => 
     /*
     Add contact info and clear data  
     */
-    
+    addAppointment(name, contact, date, time);
+    setName('');
+    setContact('');
+    setDate('');
+    setTime('');
   };
 
   return (
