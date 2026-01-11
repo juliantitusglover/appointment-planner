@@ -42,6 +42,7 @@ The app will be available at:
 http://localhost:3000/
 
 ### Project structure
+```
 src/
   App.js
   containers/
@@ -60,7 +61,7 @@ src/
       TileList.js
     tile/
       Tile.js
-
+```
 
 
 
